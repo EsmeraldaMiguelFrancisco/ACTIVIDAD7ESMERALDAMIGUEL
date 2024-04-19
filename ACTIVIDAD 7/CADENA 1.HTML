@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8"/>
+  <title>Strings: Task 1</title>
+  <style>
+    p {
+      color: purple;
+      margin: 0.5em 0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="preview">
+  </section>
+
+  <script src="CADENA 1.JS">
+
+
+    // La primera mitad de la cita
+    const quoteStart = '¡No juzgues cada día por la cosecha que cosechas ';
+
+    // La segunda mitad de la cita
+    const quoteEnd = 'sino por las semillas que siembras';
+
+    // Concatenar las dos partes de la cita para formar la cita completa
+    const finalQuote = quoteStart + quoteEnd;
+
+    // Selecciona el elemento 'section' del HTML
+    const section = document.querySelector('section');
+
+    // Crea un nuevo párrafo
+    const para1 = document.createElement('p');
+
+    // Establece el texto del párrafo como la cita completa
+    para1.textContent = finalQuote;
+
+    // Añade el párrafo al elemento 'section' del HTML
+    section.appendChild(para1);
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8"/>
+  <title>Strings: Task 3</title>
+  <style>
+    p {
+      color: purple;
+      margin: 0.5em 0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="preview">
+  </section>
+
+  <script>
+    const quote = 'I dO nOT lIke gREen eGgS anD HAM';
+
+
+    // Corregir la cita con mayúscula inicial y reemplazar "huevos verdes con jamón"
+    const fixedQuote = quote.toLowerCase().replace('ham', 'espinacas').replace('green eggs and', 'green eggs with');
+
+    // Agregar un punto al final de la cita
+    const finalQuote = fixedQuote.charAt(0).toUpperCase() + fixedQuote.slice(1) + '.';
+
+    // Seleccionar el elemento 'section' del HTML
+    const section = document.querySelector('section');
+
+    // Crear nuevos párrafos
+    const para1 = document.createElement('p');
+    const para2 = document.createElement('p');
+
+    // Establecer el texto de los párrafos
+    para1.textContent = fixedQuote;
+    para2.textContent = finalQuote;
+
+    // Añadir los párrafos al elemento 'section' del HTML
+    section.appendChild(para1);
+    section.appendChild(para2);
+  </script>
+
+</body>
+</html>

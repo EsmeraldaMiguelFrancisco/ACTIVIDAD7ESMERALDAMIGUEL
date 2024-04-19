@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8"/>
+  <title>Math: Task 1</title>
+  <style>
+    p {
+      color: purple;
+      margin: 0.5em 0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="preview" ></section>
+ 
+
+  <script src="MATEM 1.JS">
+    let finalResult;
+    let evenOddResult;
+
+
+    // Paso 1: Crear cuatro variables con números.
+    const num1 = 6;
+    const num2 = 8;
+    const num3 = 5;
+    const num4 = 3;
+
+    // Paso 2: Agregar las dos primeras variables juntas y guardar el resultado en otra variable.
+    const sumResult = num1 + num2;
+
+    // Paso 3: Restar la cuarta variable de la tercera y almacenar el resultado en otra variable.
+    const subtractResult = num4 - num3;
+
+    // Paso 4: Multiplicar los resultados de los dos últimos pasos juntos, almacenando el resultado en una variable llamada finalResult.
+    finalResult = sumResult * subtractResult;
+
+    // Paso 5: Verificar si finalResult es un número par y almacenar el resultado en una variable llamada evenOddResult.
+    evenOddResult = finalResult % 2 === 0 ? 0 : 1;
+
+
+    const section = document.querySelector('section');
+
+    const para1 = document.createElement('p');
+    const finalResultCheck = finalResult === 48 ? `Yes, well done!` : `No, it is ${ finalResult }`;
+    para1.textContent = `Is the finalResult 48? ${ finalResultCheck }`;
+    const para2 = document.createElement('p');
+    const evenOddResultCheck = evenOddResult === 0 ? 'The final result is even!' : 'The final result is odd. Hrm.';
+    para2.textContent = evenOddResultCheck;
+
+    section.appendChild(para1);
+    section.appendChild(para2);
+  </script>
+
+</body>
+</html>
